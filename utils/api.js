@@ -4,7 +4,7 @@ import { FLASH_CARD_STORAGE_KEY } from "./_flashcardconstant";
 
 // with concept from Class and
 // React Native BluePrint
-export function getDecks() {
+export function getDefaultDecks() {
   return AsyncStorage.getItem(FLASH_CARD_STORAGE_KEY).then(results => {
     if (!results) {
       AsyncStorage.setItem(

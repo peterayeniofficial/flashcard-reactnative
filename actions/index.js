@@ -1,11 +1,11 @@
-export const GET_DECKS = "RECEIVE_DECKS";
+export const GET_DECKS = "GET_DECKS";
 export const ADD_DECK = "ADD_DECK";
 export const ADD_CARD = "ADD_CARD";
 
-export function getDecks(deckList) {
+export function getDecks(decks) {
   return {
-    type: RECEIVE_DECKS,
-    deckList
+    type: GET_DECKS,
+    decks
   };
 }
 
