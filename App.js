@@ -1,7 +1,10 @@
 import React from "react";
 import { StyleSheet, Text, View, StatusBar, Platform } from "react-native";
-import { TabNavigator, StackNavigator } from "react-navigation";
-import { FontAwesome, Ionicons } from "@expo/vector-icons";
+import {
+  createBottomTabNavigator,
+  createStackNavigator
+} from "react-navigation";
+import { FontAwesome } from "@expo/vector-icons";
 import { Constants } from "expo";
 
 // utils
@@ -23,7 +26,7 @@ function FlashStatusBar({ backgroundColor, ...props }) {
   );
 }
 
-const Tabs = TabNavigator(
+const Tabs = createBottomTabNavigator(
   {
     Decks: {
       screen: Decks,
@@ -67,7 +70,7 @@ const Tabs = TabNavigator(
   }
 );
 
-const MainNavigator = StackNavigator({
+const MainNavigator = createStackNavigator({
   Home: {
     screen: Tabs
   },
