@@ -1,5 +1,5 @@
 // Baseline decks
-export const baseDecks = {
+export const defaultDecks = {
   React: {
     title: "React",
     questions: [

@@ -7,6 +7,11 @@ import {
 import { FontAwesome } from "@expo/vector-icons";
 import { Constants } from "expo";
 
+// redux packages
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import reducer from "./reducers";
+
 // utils
 import { purple } from "./utils/colors";
 
@@ -109,10 +114,12 @@ const MainNavigator = createStackNavigator({
 export default class App extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1 }}>
-        <FlashStatusBar backgroundColor={purple} barStyle="light-content" />
-        <MainNavigator />
-      </View>
+      <Provider store={createStore(reducer)}>
+        <View style={{ flex: 1 }}>
+          <FlashStatusBar backgroundColor={purple} barStyle="light-content" />
+          <MainNavigator />
+        </View>
+      </Provider>
     );
   }
 }
