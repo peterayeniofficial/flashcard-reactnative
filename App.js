@@ -72,7 +72,10 @@ const Tabs = createBottomTabNavigator(
 
 const MainNavigator = createStackNavigator({
   Home: {
-    screen: Tabs
+    screen: Tabs,
+    navigationOptions: {
+      header: null
+    }
   },
   AddCard: {
     screen: AddCard,

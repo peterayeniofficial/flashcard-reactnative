@@ -1,21 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-export default class Deck extends React.Component {
+class Deck extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+      <View>
+        <Text style={[styles.text, styles.header]}>React</Text>
+        <Text style={styles.text}>2 cards</Text>
       </View>
     );
   }
 }
 
+export default Deck;
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
+  header: {
+    fontWeight: "bold"
+  },
+  text: {
+    alignAlign: "center",
+    fontSize: 18
   }
 });
